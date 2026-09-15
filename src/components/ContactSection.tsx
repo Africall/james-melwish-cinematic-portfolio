@@ -7,6 +7,13 @@ const WHATSAPP_MESSAGE =
   "Hi James, I saw your portfolio. Let's talk about automating our operations and developing a system that goes to production.";
 const WHATSAPP_LINK = `https://wa.me/254791173864?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
+// Release assets are served as attachments, so these links download on every device
+const RELEASE = 'https://github.com/Africall/james-melwish-cinematic-portfolio/releases/latest/download';
+const downloads = [
+  { label: 'Download portfolio', meta: 'HTML · works offline', href: `${RELEASE}/James-Melwish-Cinematic-Portfolio.html` },
+  { label: 'Download PDF', meta: '2 pages', href: `${RELEASE}/James-Melwish-Portfolio.pdf` },
+];
+
 const channels = [
   {
     label: '// WHATSAPP',
@@ -254,6 +261,23 @@ export const ContactSection: React.FC = () => {
             >
               LET&apos;S BUILD YOURS ↗
             </a>
+
+            <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {downloads.map((d) => (
+                <a
+                  key={d.href}
+                  href={d.href}
+                  download
+                  className="group flex items-center justify-between gap-3 px-4 py-3 border border-[#8C6D4F]/40 hover:border-[#D4AF37] bg-[#0E0C0A] transition-colors duration-300"
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
+                >
+                  <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-[#E8D7C5] group-hover:text-[#F7E7C4]">
+                    {d.label}
+                  </span>
+                  <span className="text-[9px] font-mono text-[#8C6D4F] group-hover:text-[#D4AF37] whitespace-nowrap">{d.meta} ↓</span>
+                </a>
+              ))}
+            </div>
           </motion.div>
 
         </div>
