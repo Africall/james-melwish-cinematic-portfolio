@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 5173
+    },
+    {
+      "name": "single-html-test",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5190", "--directory", "C:\\Users\\melwi\\AppData\\Local\\Temp\\claude\\C--Users-melwi-JAMES-MELWSH\\431dd1c2-9880-48a4-af5e-c1a05af3a751\\scratchpad\\singletest"],
+      "port": 5190
     }
   ]
 }

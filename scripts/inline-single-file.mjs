@@ -90,7 +90,8 @@ const inlineRefs = (text) => {
 // ---- 3. Inline the stylesheet ----
 html = html.replace(/<link rel="stylesheet"[^>]*href="([^"]+)"[^>]*>/, (_, href) => {
   let css = readFileSync(join(dist, href.replace(/^\.\//, '')), 'utf8');
-  if (fontCss) css = css.replace(/@import\s*(?:url\()?["']?https:\/\/fonts\.googleapis\.com[^;]*;/g, '');
+  // The Google Fonts URL itself contains semicolons, so match the whole quoted URL, not "up to the first ;"
+  if (fontCss) css = css.replace(/@import\s+(?:url\(\s*)?(["']?)https:\/\/fonts\.googleapis\.com[^"')]*\1\s*\)?\s*;/g, '');
   css = inlineRefs(css);
   return `<style>${fontCss}${css}</style>`;
 });
