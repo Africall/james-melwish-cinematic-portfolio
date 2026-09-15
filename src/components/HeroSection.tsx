@@ -29,8 +29,8 @@ const fadeUpVariants: Variants = {
 
 const navItems = [
   { name: 'WORK', href: '#work' },
+  { name: 'SYSTEMS', href: '#systems' },
   { name: 'APPROACH', href: '#approach' },
-  { name: 'ABOUT', href: '#about' },
   { name: 'CONTACT', href: '#contact' },
 ];
 
@@ -285,7 +285,7 @@ export const HeroSection: React.FC<{ started?: boolean }> = ({ started = false }
                 className="text-[10px] sm:text-[11px] md:text-xs font-normal tracking-[0.28em] uppercase text-[#C4B29E]"
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
-                BUSINESS DEVELOPMENT <span className="text-[#8C6D4F] mx-1">•</span> PRODUCT MANAGEMENT <span className="text-[#8C6D4F] mx-1">•</span> SOFTWARE ENGINEERING <span className="text-[#8C6D4F] mx-1">•</span> SYSTEMS INTEGRATION
+                AI &amp; AUTOMATION <span className="text-[#8C6D4F] mx-1">•</span> SYSTEMS ENGINEERING <span className="text-[#8C6D4F] mx-1">•</span> PRODUCT <span className="text-[#8C6D4F] mx-1">•</span> BUSINESS DEVELOPMENT
               </p>
             </motion.div>
 
@@ -298,7 +298,7 @@ export const HeroSection: React.FC<{ started?: boolean }> = ({ started = false }
               <p>
                 <span className="text-[#F3DBB3]">Promised in the boardroom. Built in the codebase. Proven in production.</span>
                 <br />
-                James Melwish, Business Development &amp; Product Manager at Spans Ventures Ltd, and the lead engineer on the platform SpansCall runs on.
+                James Melwish. Working systems across AI, HRM, hyperlocal commerce, PBX and security, engineered and sold by the same hands.
               </p>
             </motion.div>
 

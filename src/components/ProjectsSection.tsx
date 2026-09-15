@@ -18,15 +18,15 @@ const projects: Project[] = [
     title: 'SpansCall Platform',
     category: 'SPANS FLAGSHIP / CALL CENTRE SERVICES',
     description:
-      'SpansCall is the service, not just the software: outsourced call-centre operations with trained and certified agents, compliance-gated campaigns, QA and daily KPIs. The discipline comes from running a BPO end of line. Underneath it sits an advantage nobody reselling a dialer can offer, a multi-tenant FreeSWITCH platform built in-house with WhatsApp automation beside the voice channel. I sell the engagement, train the floor, and engineer the stack it runs on.',
+      'SpansCall is the service, not just the software: outsourced call-centre operations with trained and certified agents, compliance-gated dialing, QA and KPIs tracked against targets. The discipline comes from running a BPO end of line. Underneath it sits an advantage nobody reselling a dialer can offer: a multi-tenant FreeSWITCH platform built in-house, with a live switchboard and a dialer that re-checks the do-not-call list before every call. I sell the engagement, train the floor, and engineer the stack it runs on.',
     role: 'Business Development Manager, Product Manager and lead engineer.',
     tech: [
       'Call-Centre Services',
       'Agent Training & Certification',
-      'Compliance Gates',
+      'Pre-Dial Compliance',
       'QA & KPIs',
       'FreeSWITCH',
-      'WhatsApp Automation',
+      'Live Switchboard',
     ],
     metrics: [
       { label: 'MODEL', value: 'Services + own platform' },
@@ -39,20 +39,20 @@ const projects: Project[] = [
     title: 'HodiMtaa',
     category: 'SPANS PRODUCT / VISITOR MANAGEMENT',
     description:
-      'The paper visitor book is two problems wearing one coat: a security hole, and under the Data Protection Act 2019, a compliance exposure. HodiMtaa replaces it with visitor passes by QR and PIN, number plate recognition at the gate, face recognition on turnstiles, deliveries, incident logs and reporting. Multitenant and white labelled. The constraint that mattered most: it keeps admitting people when the internet drops. Faces and codes still work offline, and events buffer until the link returns.',
+      'The paper visitor book is two problems wearing one coat: a security hole, and under the Data Protection Act 2019, a compliance exposure. HodiMtaa replaces it with visitor passes by QR and PIN, number plate recognition on Hikvision cameras, face enrolment on gate terminals, deliveries, incidents and panic alerts, in one multi-tenant, white-labelled platform. The constraint that mattered most is the internet dropping: faces and passes already synced to a terminal keep admitting people, and face events are held and uploaded when the link returns.',
     role: 'Product direction, engineering, and the entire commercial motion including pricing and channel strategy.',
     tech: [
-      'Multitenant SaaS',
+      'Multi-Tenant SaaS',
       'QR + PIN Passes',
-      'ANPR',
-      'Face Recognition',
-      'Offline Buffering',
+      'Plate Recognition',
+      'Face Terminals',
+      'CRM Sync',
       'White Label',
     ],
     metrics: [
       { label: 'STATUS', value: 'Live, residents at the gate' },
-      { label: 'OFFLINE', value: 'Gate keeps admitting' },
-      { label: 'COMPLIANCE', value: 'Data Protection Act 2019' },
+      { label: 'OFFLINE', value: 'Synced passes keep working' },
+      { label: 'RETENTION', value: 'Automated data purges' },
     ],
   },
   {
@@ -60,21 +60,21 @@ const projects: Project[] = [
     title: 'Staffika',
     category: 'SUPER ERP / YOUR WORK. YOUR PEOPLE.',
     description:
-      'Not a point of sale. The system above it. Staffika is a modular super ERP for Kenyan SMEs: your work and your people on one platform. HR, payroll, attendance, CRM, field workforce, invoicing and reporting, running live across multiple tenants. And because shipping is the beginning, not the end, scheduled integrity audits run against production. Most teams find their data problems when a customer does; this one finds them first.',
-    role: 'Architecture, engineering, and the ongoing audit discipline.',
+      'Not a point of sale. The system above it. Staffika is a multi-tenant super ERP for Kenyan businesses: HR, leave and appraisals, a payroll engine that computes PAYE, NSSF, SHIF and the housing levy, face and device attendance, field teams with GPS and SOS, procurement with three-way matching, invoicing and an ISP module, each switched on per company. Every table with an organisation is locked to it by row-level security, and finalising payroll asks for a one-time code first.',
+    role: 'Architecture, engineering, and the security model behind it.',
     tech: [
       'HR & Payroll',
       'Attendance',
-      'CRM',
-      'Field Workforce',
-      'Reporting',
-      'Multitenant',
-      'Postgres',
+      'Field Teams',
+      'Procurement',
+      'Invoicing',
+      'Multi-Tenant',
+      'Public API',
     ],
     metrics: [
-      { label: 'SCOPE', value: 'One platform, whole business' },
-      { label: 'TENANTS', value: 'Live, multiple' },
-      { label: 'AUDIT', value: 'Scheduled, on production' },
+      { label: 'SCOPE', value: 'Modules switched on per company' },
+      { label: 'SCALE', value: '357 migrations, 114 functions' },
+      { label: 'STATUS', value: 'Relaunching October 7' },
     ],
   },
   {
@@ -144,7 +144,7 @@ export const ProjectsSection: React.FC = () => {
               THE SPANS LINE.
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A] drop-shadow-[0_8px_25px_rgba(201,158,93,0.35)]">
-              LIVE IN PRODUCTION.
+              BUILT FOR PRODUCTION.
             </span>
           </h2>
 
@@ -152,7 +152,7 @@ export const ProjectsSection: React.FC = () => {
             className="text-xs sm:text-sm font-light text-[#A8988B] max-w-sm mt-4 md:mt-0 leading-relaxed"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            Four systems from Spans Ventures. Sold, shaped and engineered by the same hands. Each card opens with the result: real residents at real gates, real transactions through real tills.
+            The flagships, sold, shaped and engineered by the same hands. Each card opens with the result: real residents at real gates, real calls on a switch we run ourselves.
           </p>
         </motion.div>
 

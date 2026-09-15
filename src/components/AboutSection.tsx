@@ -1,6 +1,16 @@
 import React, { useRef, useState } from 'react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import type { Variants } from 'framer-motion';
+import { domains } from '../data/systems';
+
+const verifiedSystemCount = new Set(domains.flatMap((d) => d.systems.filter((s) => s.verified).map((s) => s.name))).size;
+
+const proofStats = [
+  { value: '2 ROLES', label: 'One Person, Same Product', gold: false },
+  { value: `${verifiedSystemCount} SYSTEMS`, label: 'Verified From Source', gold: true },
+  { value: `${domains.length} DOMAINS`, label: 'From HRM To AI', gold: false },
+  { value: '4 LANGUAGES', label: 'Swahili To Korean', gold: true },
+];
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -140,10 +150,10 @@ export const AboutSection: React.FC = () => {
                 pitch and the product are shaped by the same hands.
               </p>
               <p>
-                That range shows up in the work. A visitor management platform live at a residential development with
-                real residents walking through the gate. A super ERP running live across multiple tenants, with
-                scheduled integrity audits against production. Call centre telephony built in house rather than
-                resold. Physical security integration, from walk through detectors to camera systems.
+                That range shows up in the work. A visitor management platform live at a residential development, wired
+                into cameras and face terminals. A super ERP that runs HR, payroll, field teams and invoicing for
+                many companies from one platform. A FreeSWITCH phone system built rather than resold. Edge computer
+                vision that proves a job was done, and AI copilots that are only allowed to do what the rules allow.
               </p>
               <p>
                 The common thread is not a technology. It is a preference for systems that keep working when the
@@ -158,57 +168,19 @@ export const AboutSection: React.FC = () => {
               variants={fadeUpVariants}
               className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 pb-2 border-t border-[#8C6D4F]/25"
             >
-              {/* Stat 1 */}
-              <div className="flex flex-col">
-                <span
-                  className="text-3xl sm:text-4xl font-light text-[#F4EBE2] tracking-tight"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  2 ROLES
-                </span>
-                <span className="text-[10px] font-medium tracking-[0.22em] uppercase text-[#A8988B] mt-0.5">
-                  One Person, Same Product
-                </span>
-              </div>
-
-              {/* Stat 2 */}
-              <div className="flex flex-col">
-                <span
-                  className="text-3xl sm:text-4xl font-light text-[#D4AF37] tracking-tight"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  4 SYSTEMS
-                </span>
-                <span className="text-[10px] font-medium tracking-[0.22em] uppercase text-[#A8988B] mt-0.5">
-                  Live In Production
-                </span>
-              </div>
-
-              {/* Stat 3 */}
-              <div className="flex flex-col">
-                <span
-                  className="text-3xl sm:text-4xl font-light text-[#F4EBE2] tracking-tight"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  DAILY
-                </span>
-                <span className="text-[10px] font-medium tracking-[0.22em] uppercase text-[#A8988B] mt-0.5">
-                  Integrity Audits On Production
-                </span>
-              </div>
-
-              {/* Stat 4 */}
-              <div className="flex flex-col">
-                <span
-                  className="text-3xl sm:text-4xl font-light text-[#D4AF37] tracking-tight"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  OFFLINE
-                </span>
-                <span className="text-[10px] font-medium tracking-[0.22em] uppercase text-[#A8988B] mt-0.5">
-                  First, At Every Gate
-                </span>
-              </div>
+              {proofStats.map((st) => (
+                <a key={st.label} href="#systems" className="flex flex-col group">
+                  <span
+                    className={`text-3xl sm:text-4xl font-light tracking-tight ${st.gold ? 'text-[#D4AF37]' : 'text-[#F4EBE2]'}`}
+                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                  >
+                    {st.value}
+                  </span>
+                  <span className="text-[10px] font-medium tracking-[0.22em] uppercase text-[#A8988B] group-hover:text-[#D5CBC0] transition-colors mt-0.5">
+                    {st.label}
+                  </span>
+                </a>
+              ))}
             </motion.div>
           </motion.div>
 

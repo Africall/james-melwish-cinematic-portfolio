@@ -24,3 +24,7 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   .grain { animation: none; }
 }
+
+/* Horizontal chip rails scroll by touch without showing a scrollbar */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

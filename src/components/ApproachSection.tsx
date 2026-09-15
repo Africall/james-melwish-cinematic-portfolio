@@ -13,7 +13,11 @@ const principles = [
   },
   {
     lead: 'I audit my own work.',
-    body: 'Shipping is the beginning. The scheduled checks running against my production databases exist because I would rather find the problem than be told about it.',
+    body: 'Shipping is the beginning. My systems carry secret scanning and security regression tests in CI, penetration-test fixes tracked one by one, and probes that check their own data every hour, because I would rather find the problem than be told about it.',
+  },
+  {
+    lead: 'Automation first, alignment always.',
+    body: 'I map how a business actually runs before I write a line of code, then automate the parts that slow it down. The system should fit the people, not the other way round.',
   },
   {
     lead: 'Paper is usually the real competitor.',
@@ -48,7 +52,7 @@ export const ApproachSection: React.FC = () => {
             className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            04 / HOW I WORK
+            05 / HOW I WORK
           </span>
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>

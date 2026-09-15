@@ -4,35 +4,35 @@ import type { Variants } from 'framer-motion';
 
 const bentoCategories = [
   {
-    title: 'BUSINESS DEVELOPMENT',
-    badge: '01 / OPEN & CLOSE',
-    items: ['Discovery Calls', 'Solution Design', 'Pricing Strategy', 'Proposals', 'Tender Responses', 'Channel Partnerships'],
-    description: 'I open doors and close deals in security, telephony and business software. I write the proposal and I can also answer the technical question in the same meeting.',
-    stat: 'PITCH TO CONTRACT',
+    title: 'AI & AUTOMATION',
+    badge: '01 / AUTOMATE WHAT SLOWS YOU DOWN',
+    items: ['LLM Copilots & Tool Calling', 'Edge Computer Vision', 'Vision Models on Screenshots', 'Face Check-In & Liveness', 'Document OCR Pipelines', 'Scheduled Jobs & Webhooks'],
+    description: 'AI wired into real products: copilots with guarded tool calls, vision at the edge, models that turn screenshots into data. Around it, automation that runs the business on its own schedule.',
+    stat: 'AI IN THE PRODUCT',
     colSpan: 'lg:col-span-7',
   },
   {
-    title: 'SOFTWARE ENGINEERING',
-    badge: '02 / SHIP & AUDIT',
-    items: ['Supabase', 'Postgres', 'React', 'Node', 'Asterisk', 'Payments & Compliance'],
-    description: 'Full stack product work. Multitenant SaaS, React front ends, Node services and telephony control. I ship, then I keep auditing what I shipped.',
-    stat: 'MULTITENANT SAAS',
+    title: 'SYSTEMS ENGINEERING',
+    badge: '02 / SHIP & SECURE',
+    items: ['HRM & ERP', 'Point of Sale', 'Estate Security', 'Hyperlocal Commerce', 'PBX & Contact Centre', 'Multi-Tenant SaaS'],
+    description: 'Whole systems, end to end, multi-tenant by design, with role-based access and row-level security built into the data layer.',
+    stat: 'FROM SCHEMA TO SCREEN',
     colSpan: 'lg:col-span-5',
   },
   {
-    title: 'SYSTEMS INTEGRATION',
-    badge: '03 / PHYSICAL MEETS DIGITAL',
-    items: ['Access Control', 'Turnstiles', 'CCTV & VMS', 'Walk-Through Detection', 'Screening'],
-    description: 'Physical security that talks to software. Gates, cameras and detectors tied back into dashboards people actually check.',
-    stat: 'GATE TO DASHBOARD',
+    title: 'BUSINESS DEVELOPMENT & ALIGNMENT',
+    badge: '03 / PROMISE & ALIGN',
+    items: ['Discovery', 'Process Mapping', 'Solution Design', 'Pricing', 'Tenders', 'Partnerships'],
+    description: 'I align the system to how the business actually runs before a line of code, then write the proposal and answer the technical question in the same meeting.',
+    stat: 'PITCH TO PRODUCTION',
     colSpan: 'lg:col-span-5',
   },
   {
-    title: 'INFRASTRUCTURE',
-    badge: '04 / KEEP IT RUNNING',
-    items: ['Self-Hosted VPS', 'Coolify', 'Postgres', 'Queues', 'Offline Buffering'],
-    description: 'Self hosted deployment and the boring reliability work that decides whether a system survives its second month.',
-    stat: 'OFFLINE FIRST',
+    title: 'INTEGRATION & INFRASTRUCTURE',
+    badge: '04 / CONNECT & RUN',
+    items: ['M-Pesa', 'KRA eTIMS', 'WhatsApp & SMS', 'Hikvision Cameras & Terminals', 'FreeRADIUS & MikroTik', 'Self-Hosted VPS'],
+    description: 'The hard edges where systems meet the real world: payments, tax signing, messaging, gates, cameras and routers, designed for the day the internet drops.',
+    stat: 'REAL-WORLD EDGES',
     colSpan: 'lg:col-span-7',
   },
 ];
@@ -104,11 +104,11 @@ export const SkillsSection: React.FC = () => {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight uppercase leading-[0.85] select-none"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
-            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-              THE WHOLE LINE.
+            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448]">
+              AUTOMATION. ALIGNMENT.
             </span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A] drop-shadow-[0_8px_25px_rgba(201,158,93,0.35)]">
-              FIRST CALL TO DEPLOYED SYSTEM.
+            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A]">
+              SYSTEMS THAT RUN.
             </span>
           </h2>
         </motion.div>
@@ -128,7 +128,7 @@ export const SkillsSection: React.FC = () => {
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
               whileHover={{ y: -5, transition: { duration: 0.25 } }}
-              className={`${block.colSpan} relative p-8 sm:p-9 rounded-sm border border-[#8C6D4F]/35 bg-[#100D0B]/85 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-[#D4AF37]/80 hover:shadow-[0_16px_45px_rgba(212,175,55,0.14)] cursor-pointer group`}
+              className={`${block.colSpan} relative p-7 sm:p-9 rounded-sm border border-[#8C6D4F]/35 bg-[#100D0B]/85 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-[#D4AF37]/80 hover:shadow-[0_16px_45px_rgba(212,175,55,0.14)] cursor-pointer group`}
             >
               {/* Top Subtle Border Highlight */}
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -138,8 +138,8 @@ export const SkillsSection: React.FC = () => {
               <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-[#D4AF37]/40 group-hover:border-[#D4AF37] transition-colors duration-300" />
 
               {/* Card Meta Header */}
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-[#D4AF37] group-hover:text-[#F3DBB3] transition-colors">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#D4AF37] group-hover:text-[#F3DBB3] transition-colors">
                   {block.badge}
                 </span>
                 <span className="text-[10px] font-mono px-2.5 py-0.5 border border-[#8C6D4F]/40 text-[#C4B5A5] bg-[#17130F] group-hover:border-[#D4AF37]/50 group-hover:text-white transition-all">

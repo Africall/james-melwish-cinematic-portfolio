@@ -35,9 +35,9 @@ const journey: RouteStop[] = [
   {
     id: '04',
     year: 'RECENT',
-    title: 'STAFFIKA IN PRODUCTION',
-    organization: 'SUPER ERP FOR KENYAN SMES',
-    description: 'A modular business OS live across multiple tenants, with scheduled integrity audits running against production.',
+    title: 'STAFFIKA, THE SUPER ERP',
+    organization: 'HR, FIELD TEAMS, BILLING & ISP ON ONE PLATFORM',
+    description: 'Grown to 357 database migrations and 114 backend functions for many companies at once. Paused, and relaunching on October 7.',
   },
   {
     id: '05',
@@ -102,7 +102,7 @@ export const ExperienceSection: React.FC = () => {
             className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            05 / TIMELINE
+            06 / TIMELINE
           </span>
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>
@@ -219,57 +219,15 @@ export const ExperienceSection: React.FC = () => {
           >
             The ISP years are why I understand connectivity failure as an operating condition rather than a support
             ticket. The BPO years are why I build call centre software instead of reselling it. The retail years are
-            why my systems run integrity audits against production. Nothing here was wasted.
+            why my systems reconcile money down to the receipt. Nothing here was wasted.
           </p>
-        </motion.div>
-
-        {/* The Sideshows */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.2, ease: 'easeOut' }}
-          className="mt-16 pt-10 border-t border-[#8C6D4F]/20"
-        >
-          <span
-            className="block text-[10px] font-medium tracking-[0.3em] uppercase text-[#D4AF37] mb-2"
+          <a
+            href="#systems"
+            className="inline-flex items-center gap-2 mt-8 px-5 py-3 border border-[#8C6D4F]/50 hover:border-[#D4AF37] text-[#E8D7C5] hover:text-[#F7E7C4] text-[10.5px] font-medium tracking-[0.24em] uppercase transition-colors"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            THE SIDESHOWS
-          </span>
-          <p
-            className="text-xs font-light text-[#8C6D4F] mb-8 max-w-md leading-relaxed"
-            style={{ fontFamily: "'Montserrat', sans-serif" }}
-          >
-            Not everything is the main act. Built along the way, kept because building is the habit.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              { name: 'MTAALOOP', blurb: 'Your neighbourhood in one app: food, shopping and services from within 500m to 3km, delivered in minutes. A digital village experiment.' },
-              { name: 'WHERE', blurb: 'Meet your verified neighbours through quick video chats inside the estate. Real friendships, not followers.' },
-              { name: 'OSHAVAA LAUNDRY SYSTEM', blurb: 'CRM and daily operations for a laundromat: orders, customers and cash, built from actually running one.' },
-              { name: 'MERX', blurb: 'A point of sale, inventory and accounting suite: cashier desk, M-Pesa reconciliation, goods received, expiry tracking and reorder alerts.' },
-            ].map((s) => (
-              <div
-                key={s.name}
-                className="p-5 rounded-sm border border-[#8C6D4F]/25 bg-[#0E0C0A] hover:border-[#D4AF37]/50 transition-colors duration-300 group"
-              >
-                <span
-                  className="block text-xl text-[#E8D7C5] group-hover:text-[#F7E7C4] transition-colors mb-1.5"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  {s.name}
-                </span>
-                <p
-                  className="text-[11.5px] font-light text-[#A8988B] leading-relaxed"
-                  style={{ fontFamily: "'Montserrat', sans-serif" }}
-                >
-                  {s.blurb}
-                </p>
-              </div>
-            ))}
-          </div>
+            SEE EVERY SYSTEM, VERIFIED ↑
+          </a>
         </motion.div>
       </div>
     </section>
